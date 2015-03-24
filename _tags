@@ -1,0 +1,1 @@
+<*.{ml,mli,byte,native}>: package(lwt.unix lwt.ppx str ppx_deriving.std)

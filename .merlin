@@ -1,0 +1,2 @@
+B _build
+PKG lwt lwt.ppx str ppx_deriving.std

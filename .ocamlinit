@@ -1,0 +1,13 @@
+let root =
+  let rec search path = match Sys.file_exists (path ^ "/.ocamlinit") with
+    | false -> search (Filename.dirname path)
+    | true  -> path
+    in search (Sys.getcwd ())
+in Sys.chdir root;;
+
+#use "topfind";;
+#require "lwt";;
+#require "lwt.ppx";;
+#require "str";;
+#require "ppx_deriving.std";;
+#directory "_build";;
